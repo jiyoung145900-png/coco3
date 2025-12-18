@@ -1,0 +1,256 @@
+<html style="font-size: 48px;" lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+  <link href="statics/css/app.css" rel="stylesheet" />
+  <link href="statics/css/language.css" rel="stylesheet" />
+  <link href="statics/css//login/login.min.css" rel="stylesheet">
+      <script type="text/javascript" src="statics/js/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="statics/js/layer/layer.min.js"></script>
+	<script type="text/javascript" src="statics/js/global.js"></script>
+	<script type="text/javascript" src="statics/js/common.js"></script>
+  <title>큐피드 클럽</title>
+<style type="text/css">
+
+	
+#wraplogin,body,html {
+	height:100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.login-bg{
+	background:url("/images/login.jpg") no-repeat 0 0;
+	background-size:auto 100%;
+	height:100%;
+	-webkit-animation:bg-data-v-8175861c 30s linear infinite;
+	animation:bg-data-v-8175861c 30s linear infinite
+}
+.login-bg  .wrap{
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: #28282888  no-repeat 0 0;
+    background-size: 100% 100%;
+}
+@-webkit-keyframes bg-data-v-8175861c {
+	0%,to {
+	background-position-x:0
+}
+50% {
+	background-position-x:100%
+}
+}@keyframes bg-data-v-8175861c {
+	0%,to {
+	background-position-x:0
+}
+50% {
+	background-position-x:100%
+}
+
+ </style>
+ </head>
+
+ <body> 
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+<div id="wraplogin">
+    <div class="login-bg">
+        <div class="wrap">
+            
+        
+    
+<form action="?a=login" method="post" id="login_form" class="ng-pristine ng-valid" onsubmit="return false;">
+<input type="hidden" name="dosubmit" id="dosubmit" value="yes">
+  <div id="app">
+   <div class="Login" style="height: 100vh;">
+    <div class="LoginItem">
+     <header class="login-header">
+      <img class="login-logo" id="login-logo" src="/images/login_logo.png" />
+      <a href = "?a="><img class="login-delete active-opacity" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAA8CAYAAAAuaUeTAAAB2UlEQVR4nO3c30nEQBDH8d8F370CfLCEdKCWYAeW4FVgC3Yg2Ii++XolKFiAYgOysAshbDaT/TNhZ+YLB3K+LB9OspfMevj7eAVzI4A3AD8A7gGcuReQ27AT1BHAtf95ZF5DdpxYU6jQsScwLqwYVMi998K0jqI4sFJQoV+GdRTXGosK9dh4HVVqiUWFuu3litgKSxwUGmGJhEIDLLFQqIwlGgoVscRDoRKWCihUwFIDhUIsVVAowFIHhUwslVDIwFILhY1YqqGwAUs9FIhYBuVbwzKoSSksg5q1hGVQkWJYBrXQHMugEl1MfkWBcj0BuARws8uK98l9QM4BiwrlepYmQWwcNkJp7mowKHoO69DLYvdu8Fe2Lh6f793gtwAGtt53uBoGsHe/LUh1UrjH+nSv+eTfSABzE3t3Gjel8x085U+yqwG0msW+GxrYQkt3HQwsUup+loHNWrtTamCTKPfgDcxHfbqjHgwbnxuqB9v6RFo1WM6sg1qw3CkalWAl81nqwEon/1SB1ZgpVQNWa1pZBVjNOXjxYLVPWIgGa3F2RyxYq1NhIsFanjcUB9b6JCsVzM5I+yhgXTwV5zp9nwJz7z0wraMozv/rEAOzM9KJpmBfXU0QAvgHZamtZNqHkRkAAAAASUVORK5CYII=" /></a>
+      <div class="login-right">
+                <ul class="langu">
+            		<li>
+                        <div style="text-align: right;"><img src="/images/icon_lang.png"></div>
+      	
+        			<ul class="submenu">
+        			    <li><a href="javascript:setLang('k')"><img src="/images/icon_kr.png">한국인</a></li>
+        			    <li><a href="javascript:setLang('e')"><img src="/images/ico_en.png">English</a></li>
+        			    <li><a href="javascript:setLang('j')"><img src="/images/ico_jp.png">日本語</a></li>
+        			    <li><a href="javascript:setLang('t')"><img src="/images/ico_hk.png">繁體中文</a></li>
+        				<li><a href="javascript:setLang('s')"><img src="/images/ico_cn.png">简体中文</a></li>
+        				
+        				
+        			</ul>
+        		</li>
+        		
+        	</ul>
+      
+      </div>
+     </header>
+     <content>
+      <div class="content-tab">
+       <div style="" class="tab-title">
+        <!--<span>로그인 회원창</span>-->
+        
+       </div>
+      </div>
+      <div class="content-input">
+       <div class="user-input">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAYAAABroNZJAAABcklEQVQ4jZ3TP0hVYRjH8U/mEgWOEZJDQo5aBA4u0RC4lIPN/SNpi5YQGnTQxS0nB0unDATRGyI0XBoyEAuSArOhQVCC1sJBBHnhOXA4nHOv3h8cDu953vd7fs+f98yLx0NK1IFR3MRV/MJHTOJfcXtbCeAGtnAZY7gW77T+gb7igfbC+gLeYQKzue+7+ICneIteHFY5GQnrs8o1g72AVabTj1oFIFMt9lVCOrHfBPIHFxtBNnG9CSTFvzSCvI+6dFQALuE+VhtB6liOTV2FWFovRfxTPlBscdIzvMR3rGMHPRjAVDyaQVL/x/EmupAm9nO0dbcsx7JhS04GcQXnc7H/+I01vMqPfx5yK/7+NSynNA5y8XOR1iN8w4OsNhnkNhbwJIpXpZ0YtntYiXe9Pdo5j4cnmNZMizgK571tceXrpwBkSo438DxB7gaxFb3GnQRJ92W7RchPdKea/MUw5k4JOBvn9hIktSoVdroFJ9sYOQZN6kseEgUEXgAAAABJRU5ErkJggg==" />
+        <input type="text" type="text" name="username" id="username" value="" placeholder="아이디를 입력해주세요" value="" />
+        <!--div>
+         <div class="active-opacity" style="display: none;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEUAAAC2trbY2NjX19fY2NjY2NjY2NjX19fY2NjY2NjX19fX19fY2NjY2NjY2NjX19fW1tbX19fX19fY2NjX19fS0tLX19fX19fX19fW1tbW1tbW1tbY2NjX19fY2NjY2NgDtBj4AAAAH3RSTlMAB6uk8dupp6L4573KxGFBPCX6iFsh1IBHRTo3M4uJxaXMuAAAAM5JREFUKM990tkOgyAQheGjghYQd7vazvu/ZQ2YcdDE/0bjF1EWcN3orDHWjW8cazRxukmorymp7nd7KjqkXmwDnRo27fk9mYoji+/J6vCf4fZTEVd8wqVZMc6hyiq2rIwzAloiVrZYhy9tlasGy2lrhCep0sjBktDiJowsBpIqjUyCtywrErTS8lKqhZdGJNXhJ20t33VEJy3VN6ClSdW88N1qrHG06WLL/NVmzwi15mymBTY9H7AW3OxT8zNk032n+4Rjy8NppbR7LPzoDzkdQHGvQ2ADAAAAAElFTkSuQmCC" />
+         </div>
+        </div-->
+       </div>
+       <div class="user-input">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAABIUlEQVQ4ja3UsSsHYRjA8Q9RJEwWo9FfYDCyMykp/ZJFkZRfwsDGoBgYWYmyIMlmwmKQkjIpCyUSG711V7/Ocef41g333vN8e9/nee+pKg/1SKEZ4+hFK+pwi2Ms4T6ZUp0iKeEGgzjCBIaxhy5cYyqZVJN4H8A65rCI94pvW5jFCJajtYU0UXuFZD7tvBFreItiL3CYPNoM7jIkMRs4wXS8UCnqxk4OScwmOtAQi0Jxn9GCSXzkfFZRG3WwFGq0ErV0+xe7qaQ/NCaIGnGKq4KiM5TT7lEh8oj6ojr+SPJCJmmLuhO4xPl3gVmi8H8dRHX8sYZZosA+mvD6V9Eu6rOC8oi+jIw0/q39YUcv6MRjQUfIfQqiMLTCXBkrKHrA6CdHyz3Ir5B4DgAAAABJRU5ErkJggg==" />
+        <input type="password" type="password" id="password" name="password" value="" placeholder="비밀번호를 입력해주세요" value="" />
+        <!--div>
+         <div class="active-opacity" style="display: none;">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAUCAMAAADWUb86AAAAbFBMVEUAAACFhYWTk5OYmJiZmZmYmJiXl5eTk5OZmZmZmZmZmZmZmZmWlpaZmZmYmJiYmJiXl5eYmJiYmJiYmJiWlpaYmJiYmJiZmZmYmJiXl5eYmJiYmJiVlZWZmZmZmZmYmJiZmZmYmJiYmJiZmZkchPT5AAAAI3RSTlMABAq8Y14pHPvn0KAj9d/HFfJyWTvrvod3ZkQ0EOHWppF7bWTtrTwAAADiSURBVCjPhZDXcoMwEAAlZFCjVwOu2f//x2QgHjvCJvuiu5udKxIi/dJiF12nQsiCXu5ZsqeQQjqI97QYnFweuzM2tWsbqUBFn6yoB7UslXTg5YfFPHTJGjcGfPS2lwfTPLIjoNI3eyng+MzvgD3IYOBogftracyAojk9K6e4ALJR/KF1ALmPZ12Weo79GcC1IqA1LJjK2oqVLBEhVyguvHBxcAutydDpaBpUXkGVq2GKkmzb7vq4PKqhXj/xBkOg1bjfMw9wWCN9Nk2gybYUoSbSWWwJtX2SPP9Z/H/Kclv7BjqwFMHa2cJcAAAAAElFTkSuQmCC" />
+         </div>
+        </div-->
+       </div>
+       <!--div class="user-input">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAABuElEQVQ4jZXUT4iOURQG8J+vMQuKrZUNpbGzQP4k+VtSLNh8mlJqkh1FFkQsrUiZNGqiYaGEhSgkf0oksiHlW9hQVlOymNGXznRe3Xl73/DUXdx7z33uOc99zp1z7MBuLejgII7gJ67hPKaawjsNa4PYg6c4geNJthefMJwxszCQk/XYhk1Yge+4gguYzJjH2IezGMVbvMR9PBzIxR14hQc4jDfo1y7tZ3kTWIZ1WI2ruB5EI7nwuk2sBsIPOcawBTcqjab/kaQJk21i/w1x5hBWlkn8L9FganIRG4v16Sai4eK2EgtxF12cwrncm4tfTURH8SRFrLAIz9IiI2mBCnFBP4h6WFps7Ewf3UmyofTLktwbq10cvvvYyaDtxcYXbCjIwuHzU5N7DRVsxotOGrKb6dfJvubztvlscZY7EUTP8QiXa0FBtjxHr4EkcDIfoFeJHQKuwZla4FRbt2dbdbOh/zTtN2yNWnN+uqHXSkST38xvZibb8vnfpaD7caumWYXK1dHcYZNo4hlUGVUIQVelcz/jEm7jB9ZmBguwK76O8mCdqCozPrZIPw6OYx7e5/8ULTJbN/wG2Jlil62UmKkAAAAASUVORK5CYII=" />
+        <input type="text" id="code" name="code" value="" placeholder="확인 코드를 입력하세요" value="" />
+       
+         <div class="active-opacity" style="">
+          
+		  <span class="code" style="width: 100%;"><img id='code_img' style='cursor:pointer;' title='看不清？点击更换验证码' onclick='$("#code")[0].validform_valid="false";this.src=this.src+"&"+Math.random()' src='api.php?op=checkcode&code_len=4&font_size=14&width=84&height=34&font=&font_color=%23f3c7a2&background=%232f2f2f&charset=0123456789&rand=1547047878' /></span>
+         </div>
+       
+       </div-->
+       
+       <!--div class="LoginInput">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAMAAABcfiZ7AAAAeFBMVEUAAABhYWFiYmJlZWVlZWVlZWVgYGBlZWVlZWVmZmZlZWVlZWVmZmZmZmZlZWVkZGRkZGRlZWVlZWVlZWVmZmZlZWVlZWVaWlplZWVmZmZlZWVlZWVmZmZlZWVkZGRkZGRiYmJmZmZlZWVmZmZmZmZiYmJlZWVmZmbwQ5diAAAAJ3RSTlMADB7x5ocP4NzWxKR7VU5GQjztx7aAbQW7qZaPcmhSJxnOsK1kNDA90Z/nAAAAnUlEQVQY003MVxKDMAxF0We50DGd0Enf/w6T8Qjw+ZDu6ENwjK6rWguc3kFiySbBB0yEL7eXqOfL3HDcOo5h4egSjjjnyG4cU8uhNUehjNu7KsHGmP6T6hGHvpXN1Mi0x4WyNCOcRBorKaWKU8GPg2e+EdGWP0L32lYrDllVAEbluKyBgU7gG1pEBXz2DrnDRxJhJzxmjlCGX19U/gAkDQjMVctQlAAAAABJRU5ErkJggg==" />
+			<input class="inputxt name" type="text" id="agent" name="agent" value="" placeholder=" 초대코드를 입력하세요" />
+			<div></div>
+	  </div-->
+	  
+       
+       <div class="login_btn Button">
+			<input class="btn aftercheck" type="submit" id="submit" name="submit" value="로그인" />
+		</div>
+		<!--<div align=center><a href="javascript:setLang('t')">繁</a> | <a href="javascript:setLang('s')">简</a> | <a href="javascript:setLang('e')">En</a></div>-->
+       <div class="input-link">
+        <div class="active-opacity" onclick="window.open('?a=register','_self')">
+         회원가입        </div>
+        <div class="active-opacity" onclick="youke_login();">
+         게스트 로그인        </div>
+        <!--<a class="active-opacity" href="#/ForgetPwd">忘记密码</a>-->
+       </div>
+       <div class="input-link-div">
+        <div class="input-link-2"></div>
+       </div>
+      </div>
+     </content>
+    </div>
+   </div>
+  </div>
+  </form>
+  </div>
+  </div>
+ </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+		<script type="text/javascript" src="statics/js/Validform_v5.3.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	var Vform = $("#login_form").Validform();
+	Vform.config({
+		tiptype:1,
+		ajaxPost:true,
+		callback:function(data){
+			if (data.status == 'y') {
+				layer.msg(data.info, {icon: 6});
+				Vform.resetForm();//初始化表单
+				setTimeout(function(){//2秒后刷新
+					location.reload();
+				}, 2000);
+			} else {
+				layer.msg(data.info, {icon: 5});
+				// Vform.resetForm();//初始化表单
+				// $('#code_img').click();
+			}
+		}
+	});
+
+	Vform.addRule([
+		{
+			ele:'#username',
+			datatype:'*1-20',
+			nullmsg:'사용자 이름을 입력하세요!',
+			errormsg:'사용자 이름은 20자 이내여야 합니다!'
+		},
+		{
+			ele:'#password',
+			datatype:'s6-20',
+			nullmsg:'비밀번호를 입력 해주세요!',
+			errormsg:'비밀번호 길이는 6~20자!'
+		},
+// 		{
+// 			ele:'#code',
+// 			datatype:'s4-4',
+// 			nullmsg:'인증번호를 입력해주세요!',
+// 			errormsg:'인증번호 4자리를 입력해주세요!'
+// 		},
+// 		{
+// 			ele:'#agent',
+// 			datatype:'*1-20',
+// 			nullmsg:'请输入邀请码！',
+// 			errormsg:'邀请码长度1-20位！'
+// 		},
+	]);
+	$('.btn-off').on('click',function() {
+		if ($(this).hasClass('btn-on')) {
+			$(this).removeClass('btn-on');
+			$(this).prev()[0].type = 'password';
+		} else {
+			$(this).addClass('btn-on');
+			$(this).prev()[0].type = 'text';
+		}
+	});
+	placeholder('.login_box');//表单提示IE兼容
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+	
+	
+});
+function youke_login(){
+    $.ajax({
+		type:"GET",
+		url:"/?a=youke_login",
+		dataType:"json",
+		async:false,
+		success:function(res){
+			console.log(res);
+            if(res.code==1){
+                layer.msg(res.msg,{icon:6},function(){
+                    window.location.href="/?a=";
+                })
+            }else{
+                layer.msg(res.msg,{icon:5});
+            }
+		}
+	});
+}
+</script>
+<!--客服浮标-->
+<!--div id="indexbtn" onclick="window.open('?a=kefu','_self')"></div>
+  <script type="text/javascript" src="kffb.js"></script-->
+ <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"769b8aada1124815ac84f7496986a9ed","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
