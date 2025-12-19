@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Demo</title>
 
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('./images/bg.png') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.65);
+      padding: 30px;
+      width: 280px;
+      color: #fff;
+      border-radius: 8px;
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    .lang {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .lang img {
+      width: 24px;
+      margin-left: 6px;
+      opacity: 0.7;
+    }
+
+    .lang img.active {
+      opacity: 1;
+    }
+
+    .box.hide {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    input, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #ff6b6b;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .msg {
+      margin-top: 10px;
+      font-size: 14px;
+      height: 18px;
+    }
+
+    .success { color: #4cd137; }
+    .error { color: #ff7675; }
+  </style>
+</head>
+<body>
+
+<div class="box" id="loginBox">
+
+  <!-- 언어 버튼 -->
+  <div class="lang">
+    <img src="./images/kr.png" id="btnKr" onclick="setLang('ko')">
+    <img src="./images/en.png" id="btnEn" onclick="setLang('en')">
+  </div>
+
+  <h3 id="title">Login</h3>
+
+  <input id="id" placeholder="ID">
+  <input id="pw" type="password" placeholder="Password">
+
+  <button onclick="login()" id="loginBtn">Login</button>
+
+  <div class="msg" id="msg"></div>
+</div>
+
+<div class="box" id="dashboard" style="display:none;">
+  <h3 id="welcome">Welcome 🎉</h3>
+  <p id="successText">로그인에 성공했습니다.</p>
+</div>
+
+<script src="./js/lang.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
