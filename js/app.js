@@ -1,3 +1,4 @@
+applyLang();
 function login() {
   const id = document.getElementById('id').value;
   const pw = document.getElementById('pw').value;
