@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('./images/bg.jpg') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial;
+    }
+    .box {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      width: 280px;
+      color: #fff;
+      border-radius: 8px;
+    }
+    input, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Login</h3>
+  <input id="id" placeholder="ID">
+  <input id="pw" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
