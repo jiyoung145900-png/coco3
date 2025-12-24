@@ -67,7 +67,7 @@ body {
     transition:0.15s;
 }
 .left-item.active{
-    color:#ffdd66;
+    color:#9ce8f3;
     font-weight:700;
     text-shadow:0 0 6px #ffdd66;
 }
