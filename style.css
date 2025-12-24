@@ -23,7 +23,7 @@ body{
 
 /* 래퍼 (배경 이미지 미세한 틈새를 검은색으로 처리) */
 .wrap{
-    width:1024px; /* 원래 너비로 복원 */
+    width:1030px; /* 원래 너비로 복원 */
     height:490px;
     margin:0 auto;
     position:relative;
@@ -35,19 +35,32 @@ body{
 }
 
 /* 상단 탭 */
-.top-menu{
-    position:absolute;
-    top:50px;
-    left:190px;
-    display:flex;
-    gap:20px;
-    z-index:5;
+.top-menu {
+    position: absolute;
+    top: 50px;
+    left: 190px;
+    display: flex;
+    gap: 20px;
+    z-index: 5;
 }
-.top-menu .menu{
-    background:rgba(160,160,160,0.3);
-    padding:8px 15px;
-    border-radius:5px;
-    font-size:14px;
+
+.top-menu .menu {
+    /* 배경을 조금 더 진하게 해서 글자를 보호함 */
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    
+    /* 글자 스타일 추가 (방법 B 적용) */
+    color: #ffffff; /* 글자색을 화이트로 해서 깔끔하게 */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 어두운 그림자로 글자 부각 */
+    
+    /* 테두리 살짝 추가해서 고급스럽게 */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    white-space: nowrap;
+    cursor: pointer; /* 클릭 가능한 느낌 주기 */
 }
 
 /* 제목 / 서브 */
