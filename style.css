@@ -60,15 +60,25 @@ body{
     font-weight:700;
     z-index:5;
 }
-.subtitle{
-    position:absolute;
-    top:95px;
-    width:100%;
-    text-align:center;
-    transform:translateX(-5px);
-    font-size:14px;
-    color:#c8182f;
-    z-index:5;
+.subtitle {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    text-align: center;
+    /* 텍스트 중앙 정렬을 방해할 수 있어 translateX는 0으로 잡거나 제거하는 게 깔끔합니다 */
+    transform: translateX(0px); 
+    font-size: 16px; /* 14px보다 살짝 키워야 테두리가 예쁘게 먹힙니다 */
+    color: #c8182f; /* 기존의 고급스러운 레드 유지 */
+    font-weight: bold; /* 글자를 두껍게 해서 테두리 안에서도 선명하게 */
+    z-index: 5;
+    
+    /* [방법 B] 흰색 테두리(외곽선) 효과 - 사방으로 그림자를 줘서 글자를 띄움 */
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff,
+         0px  0px 4px rgba(255,255,255,0.8); /* 은은한 후광 효과 추가 */
 }
 
 /* 왼쪽 메뉴 */
@@ -141,17 +151,28 @@ body{
 }
 
 /* 하단 안내 */
-.notice{
-    position:absolute;
-    bottom:50px;
-    left:160px; 
-    right:160px; 
-    font-size:11px;
-    color:#c8182f;
-    line-height:1.5;
-    text-align:left;
-    z-index:5;
+.notice {
+    position: absolute;
+    bottom: 50px;
+    left: 160px; 
+    right: 160px; 
+    font-size: 11px;
+    color: #c8182f; /* 기존 레드 유지 */
+    font-weight: bold; /* 작은 글씨일수록 두껍게 해야 테두리 안에서 잘 보임 */
+    line-height: 1.5;
+    text-align: left;
+    z-index: 5;
     white-space: nowrap; /* 하단 문구 2줄 고정 */
+
+    /* [방법 B] 작은 글씨용 정밀한 흰색 테두리 */
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+    
+    /* 혹시 배경이 너무 밝아 글자가 묻히면 아래 줄 주석을 해제하세요 */
+    /* background: rgba(255, 255, 255, 0.4); border-radius: 4px; padding: 2px 5px; */
 }
 
 /* 색상 패널 */
