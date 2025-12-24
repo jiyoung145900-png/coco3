@@ -64,14 +64,27 @@ body{
 }
 
 /* 제목 / 서브 */
-.title{
-    position:absolute;
-    top:125px;
-    width:100%;
-    text-align:center;
-    font-size:28px;
-    font-weight:700;
-    z-index:5;
+.title {
+    position: absolute;
+    top: 125px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px; /* 28px보다 살짝 키워 시원하게 */
+    font-weight: 900; /* 최대한 두껍게 해서 존재감 폭발 */
+    color: #ffffff; /* 기본 글자색은 화이트로 깔끔하게 */
+    z-index: 5;
+
+    /* [방법 B 강화형] 입체적인 테두리와 그림자 */
+    /* 검은색 외곽선으로 글자 윤곽을 잡고, 바깥에 빨간색 후광을 줘서 화려하게 만듭니다 */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  0px 15px rgba(200, 24, 47, 0.8); /* 데이지 시그니처 레드색 은은한 광채 */
+    
+    letter-spacing: 2px; /* 글자 사이 간격을 살짝 벌려 고급스럽게 */
+    text-transform: uppercase; /* 영문일 경우 대문자로 강조 */
 }
 .subtitle {
     position: absolute;
