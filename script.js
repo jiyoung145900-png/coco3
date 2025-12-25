@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // 캡처 영역 (.wrap 영역)을 캔버스로 변환
             html2canvas(captureArea, {
-                width: 1024, // ★ 최종 수정: 캡처 너비를 1022px로 강제 지정하여 오른쪽 2px 여백 제외 ★
+                width: 1032, // ★ 최종 수정: 캡처 너비를 1022px로 강제 지정하여 오른쪽 2px 여백 제외 ★
                 // useCORS: true, 
             }).then(canvas => {
                 // 캡처 후 다시 표시
