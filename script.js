@@ -121,9 +121,9 @@ presetColors.forEach(color => {
     swatch.className = 'color-swatch';
     swatch.dataset.color = color;
     
-    // 무색(transparent)이면 배경색 설정을 건너뛰거나 하얗게 표시
+    // 무색 버튼 디자인 처리
     if (color === 'transparent') {
-        swatch.style.backgroundColor = '#fff';
+        swatch.style.backgroundColor = '#ffffff';
     } else {
         swatch.style.backgroundColor = color;
     }
@@ -131,16 +131,33 @@ presetColors.forEach(color => {
     swatch.addEventListener('click', () => {
         if (activeColorInput) {
             if (color === 'transparent') {
-                // 1. CSS 변수를 직접 transparent로 변경 (즉시 반영)
-                const cssVar = activeColorInput.id === 'colNumBgColor' ? '--col-num-bg-color' : '--col-select-bg-color';
-                setVar(cssVar, 'transparent');
-                saveSetting(activeColorInput.id, 'transparent');
+                // [무색 처리 로직] 각 입력 필드 ID에 맞는 CSS 변수 매칭
+                const cssVarMap = {
+                    'headerBgColor': '--table-header-bg',
+                    'headerTextColor': '--table-header-text',
+                    'rowBgColor': '--table-row-bg',
+                    'rowTextColor': '--table-row-text',
+                    'colNumTextColor': '--col-num-text-color',
+                    'colNumBgColor': '--col-num-bg-color',
+                    'colSelectTextColor': '--col-select-text-color',
+                    'colSelectBgColor': '--col-select-bg-color',
+                    'colServiceColor': '--col-service-color'
+                };
+
+                const targetVar = cssVarMap[activeColorInput.id];
+                if (targetVar) {
+                    setVar(targetVar, 'transparent');
+                    saveSetting(activeColorInput.id, 'transparent');
+                }
             } else {
-                // 2. 일반 색상은 기존 방식대로 처리
+                // [일반 색상 처리 로직]
                 activeColorInput.value = color;
+                // input 이벤트를 강제로 발생시켜 화면에 반영
                 const event = new Event('input', { bubbles: true });
                 activeColorInput.dispatchEvent(event);
             }
+        } else {
+            alert("먼저 변경할 항목(입력칸)을 클릭해 주세요!");
         }
     });
     colorPaletteElement.appendChild(swatch);
