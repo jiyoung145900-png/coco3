@@ -115,17 +115,36 @@ document.addEventListener("DOMContentLoaded", () => {
 ];
 let activeColorInput = headerBg;
 
-    // 색상 버튼 생성
-    presetColors.forEach(color => {
-        const swatch = document.createElement('div');
-        swatch.className = 'color-swatch'; swatch.style.backgroundColor = color; swatch.dataset.color = color;
-        swatch.addEventListener('click', () => {
-            if (activeColorInput) {
-                const event = new Event('input', { bubbles: true }); activeColorInput.value = color; activeColorInput.dispatchEvent(event); 
+   // 색상 버튼 생성 부분 수정
+presetColors.forEach(color => {
+    const swatch = document.createElement('div');
+    swatch.className = 'color-swatch';
+    swatch.dataset.color = color;
+    
+    // 무색(transparent)이면 배경색 설정을 건너뛰거나 하얗게 표시
+    if (color === 'transparent') {
+        swatch.style.backgroundColor = '#fff';
+    } else {
+        swatch.style.backgroundColor = color;
+    }
+
+    swatch.addEventListener('click', () => {
+        if (activeColorInput) {
+            if (color === 'transparent') {
+                // 1. CSS 변수를 직접 transparent로 변경 (즉시 반영)
+                const cssVar = activeColorInput.id === 'colNumBgColor' ? '--col-num-bg-color' : '--col-select-bg-color';
+                setVar(cssVar, 'transparent');
+                saveSetting(activeColorInput.id, 'transparent');
+            } else {
+                // 2. 일반 색상은 기존 방식대로 처리
+                activeColorInput.value = color;
+                const event = new Event('input', { bubbles: true });
+                activeColorInput.dispatchEvent(event);
             }
-        });
-        colorPaletteElement.appendChild(swatch);
+        }
     });
+    colorPaletteElement.appendChild(swatch);
+});
 
     // 컬러 입력 필드 포커스
     const colorInputs = document.querySelectorAll('.color-panel input[type="color"]');
