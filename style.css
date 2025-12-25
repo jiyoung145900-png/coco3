@@ -241,9 +241,22 @@ body{
     padding-bottom: 10px; margin-bottom: 5px;
 }
 .color-palette { display: flex; flex-wrap: wrap; gap: 5px; width: 175px; }
-.color-swatch { 
-    width: 38px; height: 25px; border-radius: 4px; cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    transition: transform 0.1s;
+/* 첫 번째 스와치(투명색) 디자인 */
+.color-swatch[data-color="transparent"] {
+    background: #ffffff !important; /* 배경은 밝게 */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc; /* 테두리를 줘서 영역 구분 */
 }
-.color-swatch:hover { transform: scale(1.05); border-color: white; }
+
+.color-swatch[data-color="transparent"]::after {
+    content: "";
+    position: absolute;
+    top: -10%; /* 대각선이 꽉 차게 */
+    left: 48%;
+    width: 2px; /* 선 두께 살짝 올림 */
+    height: 120%;
+    background: #ff0000; /* 확실한 빨간색 */
+    transform: rotate(45deg);
+    box-shadow: 0 0 2px rgba(0,0,0,0.3); /* 선이 더 잘 보이게 */
+}
