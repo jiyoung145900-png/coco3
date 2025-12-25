@@ -121,7 +121,7 @@ presetColors.forEach(color => {
     swatch.className = 'color-swatch';
     swatch.dataset.color = color;
     
-    // 무색 버튼 디자인 처리
+    // 무색 버튼 디자인 (대각선 배경용)
     if (color === 'transparent') {
         swatch.style.backgroundColor = '#ffffff';
     } else {
@@ -131,7 +131,7 @@ presetColors.forEach(color => {
     swatch.addEventListener('click', () => {
         if (activeColorInput) {
             if (color === 'transparent') {
-                // [무색 처리 로직] 각 입력 필드 ID에 맞는 CSS 변수 매칭
+                // [1] ID와 CSS 변수 맵핑
                 const cssVarMap = {
                     'headerBgColor': '--table-header-bg',
                     'headerTextColor': '--table-header-text',
@@ -146,23 +146,27 @@ presetColors.forEach(color => {
 
                 const targetVar = cssVarMap[activeColorInput.id];
                 if (targetVar) {
-                    setVar(targetVar, 'transparent');
+                    // [2] 즉시 화면의 CSS 변수를 'transparent'로 변경
+                    document.documentElement.style.setProperty(targetVar, 'transparent');
+                    
+                    // [3] 로컬 스토리지 저장 (나중에도 유지되도록)
                     saveSetting(activeColorInput.id, 'transparent');
+
+                    // [4] 중요: input창에 글자로 '투명'이라고 표시해주거나 색상을 초기화 (선택사항)
+                    // input type="color"는 투명을 표현 못하므로 시각적 피드백만 줍니다.
+                    console.log(activeColorInput.id + " 항목이 투명으로 설정되었습니다.");
                 }
             } else {
-                // [일반 색상 처리 로직]
+                // 일반 색상 처리 로직
                 activeColorInput.value = color;
-                // input 이벤트를 강제로 발생시켜 화면에 반영
                 const event = new Event('input', { bubbles: true });
                 activeColorInput.dispatchEvent(event);
             }
         } else {
-            alert("먼저 변경할 항목(입력칸)을 클릭해 주세요!");
+            alert("먼저 오른쪽의 색상 칸(네모 박스)을 클릭해서 선택해 주세요!");
         }
     });
     colorPaletteElement.appendChild(swatch);
-});
-
     // 컬러 입력 필드 포커스
     const colorInputs = document.querySelectorAll('.color-panel input[type="color"]');
     colorInputs.forEach(input => {
