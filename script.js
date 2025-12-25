@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // 캡처 영역 (.wrap 영역)을 캔버스로 변환
             html2canvas(captureArea, {
-                width: 1022, // ★ 최종 수정: 캡처 너비를 1022px로 강제 지정하여 오른쪽 2px 여백 제외 ★
+                width: 1024, // ★ 최종 수정: 캡처 너비를 1022px로 강제 지정하여 오른쪽 2px 여백 제외 ★
                 // useCORS: true, 
             }).then(canvas => {
                 // 캡처 후 다시 표시
@@ -107,10 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const titleInput = document.getElementById("titleInput"); const titleElement = document.querySelector(".title");
     const colorPaletteElement = document.querySelector(".color-palette");
     const presetColors = [
-        '#FF0000', '#0000FF', '#008000', '#FFFF00', '#FFA500', '#800080', '#00FFFF', '#FFC0CB', '#FFFFFF', '#000000', 
-        '#808080', '#A52A2A', '#00FF00', '#FFD700', '#FF4500', '#9932CC', '#4682B4', '#DAA520', '#2F4F4F', '#00BFFF'
-    ];
-    let activeColorInput = headerBg;
+    'transparent', // <- 여기에 무색(투명) 기능을 넣습니다.
+    '#FF0000', '#0000FF', '#008000', '#FFFF00', '#FFA500', 
+    '#800080', '#00FFFF', '#FFC0CB', '#FFFFFF', '#000000', 
+    '#808080', '#A52A2A', '#00FF00', '#FFD700', '#FF4500', 
+    '#9932CC', '#4682B4', '#DAA520', '#2F4F4F', '#00BFFF'
+];
+let activeColorInput = headerBg;
 
     // 색상 버튼 생성
     presetColors.forEach(color => {
