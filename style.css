@@ -23,7 +23,7 @@ body{
 
 /* 래퍼 (배경 이미지 미세한 틈새를 검은색으로 처리) */
 .wrap{
-    width:1032px; /* 원래 너비로 복원 */
+    width:1024px; /* 원래 너비로 복원 */
     height:490px;
     margin:0 auto;
     position:relative;
